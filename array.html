@@ -1,0 +1,53 @@
+<script>
+    let array = [
+        'monkey',
+        'donkey',
+        'snake',
+        'horse'
+    ];
+
+    let upperArray = array.map((element) => {
+        return element.toUpperCase();
+    });
+    console.log(upperArray)
+
+    let newArray = array.filter((element, key) => {
+        console.log(element, element.length === 6);
+        return element.length === 6;
+    })
+
+    console.log(array, newArray)
+
+    let products = [
+        {'name': 'chair', 'price': 50},
+        {'name': 'table', 'price': 20},
+        {'name': 'bed', 'price': 204},
+        {'name': 'lamp', 'price': 10},
+    ];
+
+    let anpotherArray = products.filter(element=> {
+        return (element.price < 50)
+
+    }).sort((product1, product2)=>{
+        return product1.price - product2.price;
+    });
+    console.log('raffah ', anpotherArray)
+
+
+    console.log(products.map(product => {
+        return product.name;
+    }))
+
+    let sortedArray = products.sort((productA, productB) => {
+        /*if(productA.price > productB.price)
+            return -1;
+        else if (productA.price < productB.price)
+            return 1;
+        else
+            return 0;
+            */
+
+       return productA.price - productB.price;
+    });
+    console.log(sortedArray)
+</script>

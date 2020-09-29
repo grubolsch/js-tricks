@@ -1,0 +1,115 @@
+<script>
+let person = {
+    'name' : 'Koen Eelen',
+    'age' : 31,
+    'walk': function() {
+        return 'koen is walking';
+    }
+}
+
+delete person['name'];
+
+console.log(person.name);
+console.log(person.walk());
+
+person.sleep = function() {
+    return 'koen is sleeping';
+}
+
+console.log(person.sleep());
+
+console.log('----------------');
+
+let smurfsObject = {
+    'a': 'grote smurf',
+    'b': 'smurfin',
+    'c': 'brilsmurf',
+    'd': function() {
+        return 'This is a smurf';
+    }
+}
+
+console.log(smurfsObject.d());
+
+
+
+
+let smurfsAll = [
+    'grote smurf',
+    'smurfin',
+    'brilsmurf',
+];
+
+console.log(smurfsObject);
+console.log(smurfsAll);
+
+window.alert = function(text) {
+    document.write(text);
+}
+
+Object.prototype.sing = function() {
+    alert('La la la');
+}
+
+smurfsObject.sing();
+
+String.prototype.upperCase = function() {
+    return this.charAt(0).toUpperCase() + this;
+};
+
+console.log("rafah".upperCase());
+
+let map = new Map();
+map.set('1212', 50);
+map.set('93494', 70);
+map.set('393', 30);
+map.set('393', "this is a bug");
+
+
+
+
+
+/*
+let smurfsAll = [
+    'grote smurf',
+    'smurfin',
+    'brilsmurf',
+];
+smurfsAll[1] = 'knutselsmurf';
+smurfsAll.push('test');
+smurfsAll['test'] = 'monkey';
+smurfsAll[10] = 'donkey';
+console.log(smurfsAll, typeof smurfsAll, smurfsAll.length);
+
+for (let i = 0; i < smurfsAll.length; i++) {
+    console.log(smurfsAll[i]);
+}
+console.log('---------------')
+smurfsAll.forEach((smurf, id) => {
+    console.log(id, smurf);
+});
+smurfsAll.forEach(function(element) {
+
+});
+console.log('---------------')
+// MAPS
+let map = new Map();
+map.set('monkey', 'Monkey');
+map.set('donkey', 'Donkey');
+map.set('horse', 'Horse');
+map.set('horse', 'Seahorse');
+
+if(map.has('monkey')) {
+    console.log('monkey exists')
+}
+if(map.has('dragon')) {
+    console.log('dragon exists')
+}
+
+map.forEach(element => {
+    console.log(element);
+})
+
+console.log('I ride a '+ map.get('horse'));
+*/
+</script>
